@@ -1,6 +1,7 @@
 package com.junit.business;
 
 import com.junit.data.SomeDataImpl;
+import com.junit.item.ItemModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -16,5 +17,10 @@ public class SomeBusinessImpl {
     public int calcuateSumfromData(){
         int[] data=someData.getAllData();
         return Arrays.stream(data).sum();
+    }
+
+    public ItemModel returndummyItem(){
+       return new ItemModel(2,"Box",1000,3);
+
     }
 }
